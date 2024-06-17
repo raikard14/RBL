@@ -35,7 +35,7 @@ pipeline{
             steps{
                 script{
                     try{
-                        sh 'docker run --name $project -e $registry'
+                        sh 'docker run --name $project $registry'
                     }finally{
                         sh 'docker rm $project'
                     }
